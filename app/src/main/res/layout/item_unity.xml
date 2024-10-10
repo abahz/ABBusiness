@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/cancel"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/status">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Unite de mesure"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:fontFamily="@font/sailec_regular"/>
+
+            <ImageButton
+                android:id="@+id/close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/round_back_24"
+                android:layout_marginStart="10dp"/>
+
+
+
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/mainSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/button02"
+            app:defaultQueryHint="@null"
+            app:iconifiedByDefault="false"
+            app:queryHint="Recherche..."
+            android:layout_marginTop="5dp"
+            app:searchIcon="@drawable/round_search_24" />
+
+
+        <ListView
+            android:id="@+id/listAlert"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/status"
+        android:gravity="center"
+        android:text="Quitter"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:paddingEnd="20dp"
+        android:layout_alignParentBottom="true"
+        tools:ignore="RtlSymmetry" />
+
+</RelativeLayout>

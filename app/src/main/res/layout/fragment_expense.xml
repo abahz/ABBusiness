@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ExpenseFragment">
+
+    <RelativeLayout
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:src="@drawable/round_back_24"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/back"
+            android:textSize="20sp"
+            android:text="Selectionner la filtre"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:padding="8dp"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip"
+            android:layout_marginStart="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/back"
+            app:singleLine="true"
+            app:selectionRequired="true"
+            android:layout_toStartOf="@id/selected"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toutes"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:focusedByDefault="true"/>
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/monthly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mensuel"
+                style="@style/Widget.Material3.Chip.Filter"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/daily"
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Journal"
+                style="@style/Widget.Material3.Chip.Filter"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_alignParentEnd="true"
+            android:text="12/12/2020"
+            android:gravity="center"
+            android:layout_margin="6dp"
+            android:drawablePadding="4dp"
+            android:layout_below="@id/back"
+            android:background="@drawable/button03"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:padding="4dp"
+            app:drawableEndCompat="@drawable/ic_down" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:background="@color/recycler"
+            android:layout_height="match_parent"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/add"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:shapeAppearance="@style/Circular_Image"
+            android:background="@color/blue"
+            android:src="@drawable/round_add_24"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"
+            android:scaleType="center"/>
+
+
+    </RelativeLayout>
+</LinearLayout>

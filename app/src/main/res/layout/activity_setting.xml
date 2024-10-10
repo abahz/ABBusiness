@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/status">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@id/back"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:text="Configuration"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/round_back_24" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:padding="4dp"
+                    android:text="Nom de la boutique" />
+
+                <TextView
+                    android:id="@+id/shop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:gravity="end"
+                    android:padding="4dp"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:padding="4dp"
+                    android:text="Adresse : " />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:gravity="end"
+                    android:padding="4dp"
+                    android:text="0.00$" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:padding="4dp"
+                    android:text="Phone" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:gravity="end"
+                    android:padding="4dp"
+                    android:text="12:00"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/sit_jr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:gravity="start"
+                android:layout_marginVertical="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:padding="4dp"
+                android:textSize="18sp"
+                android:text="Situation net du 12/02/2023"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:padding="4dp"
+                    android:text="Stock Matin" />
+
+                <TextView
+                    android:id="@+id/stock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:gravity="end"
+                    android:padding="4dp"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:padding="4dp"
+                    android:text="Stock Soir" />
+
+                <TextView
+                    android:id="@+id/stock_after"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:gravity="end"
+                    android:padding="4dp"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:padding="4dp"
+                    android:text="Valeur de vente " />
+
+                <TextView
+                    android:id="@+id/vente"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:gravity="end"
+                    android:padding="4dp"
+                    android:text="0.00$" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:padding="4dp"
+                    android:text="Depense" />
+
+                <TextView
+                    android:id="@+id/depense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:gravity="end"
+                    android:padding="4dp"
+                    android:text="0.00$"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:padding="4dp"
+                    android:text="Reduction" />
+
+                <TextView
+                    android:id="@+id/reduc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:gravity="end"
+                    android:padding="4dp"
+                    android:text="0.00$"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:gravity="start"
+                android:layout_marginVertical="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:padding="4dp"
+                android:textSize="18sp"
+                android:text="Rapports en PDF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/daily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:padding="14dp"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="15sp"
+                android:background="@drawable/button03"
+                android:text="Rapport Journalier"
+                app:drawableEndCompat="@drawable/round_right_24" />
+
+
+            <TextView
+                android:id="@+id/monthly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:padding="14dp"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="15sp"
+                android:background="@drawable/button03"
+                android:text="Rapport Mensuel"
+                app:drawableEndCompat="@drawable/round_right_24" />
+
+            <TextView
+                android:id="@+id/yearly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:padding="14dp"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="15sp"
+                android:background="@drawable/button03"
+                android:text="Rapport Annuel"
+                app:drawableEndCompat="@drawable/round_right_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:gravity="start"
+                android:layout_marginVertical="8dp"
+                android:layout_marginHorizontal="10dp"
+                android:padding="4dp"
+                android:textSize="18sp"
+                android:text="Parametres"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:padding="16dp"
+                android:layout_gravity="center"
+                android:drawablePadding="10dp"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="15sp"
+                android:background="@drawable/button03"
+                android:text="Modifier la boutique"
+                app:drawableStartCompat="@drawable/round_settings_24" />
+
+
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:padding="14dp"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="15sp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/button03"
+                android:text="Deconnexion"
+                app:drawableStartCompat="@drawable/round_logout_24" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

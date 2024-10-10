@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "590339070186",
+    "project_id": "ab-apps-f5b86",
+    "storage_bucket": "ab-apps-f5b86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590339070186:android:d6ec988aa9b473d7e65f93",
+        "android_client_info": {
+          "package_name": "com.abahz.abbusiness"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk5LQgf_mgDFlM-0vt6HE_9G9ogsu9P60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

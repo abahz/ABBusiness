@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:text="Connexion"
+        android:padding="4dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:hint="Phone"
+        android:inputType="phone"
+        android:autofillHints="phone"
+        android:fontFamily="@font/sailec_regular"
+        android:textColorHint="@color/black"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/round_phone_24"
+        android:backgroundTint="@color/black"/>
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:hint="Mot de passe"
+        android:fontFamily="@font/sailec_regular"
+        android:inputType="textPassword"
+        android:autofillHints="password"
+        android:textColorHint="@color/black"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/round_lock_24"
+        android:backgroundTint="@color/black"/>
+
+    <androidx.constraintlayout.utils.widget.MotionButton
+        android:id="@+id/button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Valider"
+        android:fontFamily="@font/averia_gruesa_libre"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button01"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/black"
+        android:visibility="gone"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/switchTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="@font/averia_gruesa_libre"
+        android:textColor="@color/black"
+        android:text="@string/pas_de_boutique_cr_er"
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>

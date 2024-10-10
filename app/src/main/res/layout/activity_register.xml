@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+     android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/status">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@id/back"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:text="Création boutique"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/round_back_24" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:hint="Nom de la boutique"
+                android:inputType="textPersonName"
+                android:autofillHints="username"
+                android:fontFamily="@font/sailec_regular"
+                android:textColorHint="@color/black"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/round_store_24"
+                android:backgroundTint="@color/black"/>
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:hint="Phone"
+                android:inputType="phone"
+                android:autofillHints="phone"
+                android:fontFamily="@font/sailec_regular"
+                android:textColorHint="@color/black"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/round_phone_24"
+                android:backgroundTint="@color/black"/>
+
+            <EditText
+                android:id="@+id/pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:hint="Mot de passe"
+                android:fontFamily="@font/sailec_regular"
+                android:inputType="textPassword"
+                android:autofillHints="password"
+                android:textColorHint="@color/black"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/round_lock_24"
+                android:backgroundTint="@color/black"/>
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:hint="Adresse"
+                android:fontFamily="@font/sailec_regular"
+                android:inputType="text"
+                android:autofillHints="name"
+                android:textColorHint="@color/black"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/round_location_24"
+                android:backgroundTint="@color/black"/>
+
+            <TextView
+                android:id="@+id/devise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Devise"
+                android:textColorHint="@color/black"
+                android:textSize="18sp"
+                android:letterSpacing="0.1"
+                android:drawableStart="@drawable/round_wallet_24"
+                android:drawablePadding="10dp"
+                android:padding="2dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:layout_marginHorizontal="20dp"/>
+
+            <androidx.constraintlayout.utils.widget.MotionButton
+                android:id="@+id/button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Valider"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginTop="29dp"
+                android:background="@drawable/button01"/>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/black"
+                android:visibility="gone"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:id="@+id/switchTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:textColor="@color/black"
+                android:text="@string/vouz_avez_une_boutique_connexion"
+                android:layout_marginTop="30dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

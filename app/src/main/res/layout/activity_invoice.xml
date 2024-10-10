@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InvoiceActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="8dp"
+        android:background="@color/status">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facture"
+            android:textColor="@color/black"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:layout_toEndOf="@id/back"
+            android:textStyle="bold"
+            android:layout_marginStart="14dp"/>
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/round_back_24"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="20dp"
+        android:elevation="20dp"
+        app:cardCornerRadius="4dp"
+        android:backgroundTint="@color/white"
+        android:background="@color/white"
+        android:layout_margin="20dp"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/button">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/toolbar"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/inv_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom de la boutique "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/inv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+243 990 296 771 "
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:id="@+id/inv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+243 990 296 771 "
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"/>
+
+
+            <TextView
+                android:id="@+id/inv_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beni boy"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rec1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Designation "
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prix Unitaire"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"/>
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Qté/"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toStartOf="@id/text3"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/invoiceRv"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="14dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text2"/>
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/black"
+                    android:layout_below="@id/invoiceRv"
+                    android:layout_marginHorizontal="20dp"/>
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Totaux: "
+                    android:layout_below="@id/line1"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:id="@+id/inv_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prix "
+                    android:layout_below="@id/line1"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="20dp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="40dp"/>
+
+            <TextView
+                android:id="@+id/inv_myDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/05/2023 12:34 "
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.utils.widget.MotionButton
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="150dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="Imprimer"
+        android:fontFamily="@font/averia_gruesa_libre"
+        android:layout_alignParentBottom="true"
+        style="@style/TextAppearance.Material3.BodyLarge"
+        android:background="@drawable/button02"
+        android:backgroundTint="@color/black"/>
+
+</RelativeLayout>

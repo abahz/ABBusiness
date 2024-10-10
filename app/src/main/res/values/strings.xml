@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AB Business</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pas_de_boutique_cr_er">Pas de boutique ? <font color="#E63700">Créer</font></string>
+    <string name="vouz_avez_une_boutique_connexion">Vouz avez une boutique ?  <font color="#E63700">Connexion</font></string>
+</resources>

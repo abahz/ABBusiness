@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragments.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/button02">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/round_back_24"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="8dp"
+            android:layout_centerVertical="true"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            app:defaultQueryHint="@null"
+            android:gravity="center"
+            android:textAlignment="center"
+            app:iconifiedByDefault="false"
+            app:queryHint="Recherche..."
+            app:searchIcon="@null"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:background="@color/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/add"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:shapeAppearance="@style/Circular_Image"
+            android:background="@color/blue"
+            android:src="@drawable/round_add_24"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"
+            android:scaleType="center"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

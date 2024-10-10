@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000B59</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#091138</color>
+    <color name="gray">#7C7C7C</color>
+    <color name="gray02">#6A6A6A</color>
+    <color name="gray03">#6A6A6A</color>
+    <color name="red">#E63700</color>
+    <color name="status">#E4E4E4</color>
+    <color name="recycler">#F2F2F2</color>
+</resources>
